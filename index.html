@@ -162,6 +162,10 @@
     font-family:var(--body);font-style:italic;font-size:0.85rem;
     color:var(--ink-muted);margin-bottom:0.6rem;font-weight:300;
   }
+  .popup-img{
+    width:100%;height:64px;object-fit:contain;object-position:left center;
+    margin-bottom:0.6rem;
+  }
   .popup-desc{
     font-family:var(--body);font-size:0.85rem;line-height:1.65;
     color:var(--ink);border-top:1px solid var(--rule);padding-top:0.55rem;font-weight:400;
@@ -368,6 +372,7 @@ function buildPopup(d) {
     + '<div class="popup-inner">'
     + '<p class="popup-role">' + d.role + '</p>'
     + '<p class="popup-dates">' + d.dates + '</p>'
+    + (d.img ? '<img class="popup-img" src="' + d.img + '" alt=""/>' : '')
     + '<p class="popup-desc">' + d.desc + '</p>'
     + (d.meta ? '<p class="popup-meta">' + d.meta + '</p>' : '')
     + '<div class="popup-tags">' + tags + '</div>'
@@ -392,6 +397,7 @@ var pins = [
     city: 'Jakarta, Indonesia',
     role: 'Multimedia Design, LaSalle College Jakarta',
     dates: '2016 — 2018',
+    img: 'img/jakarta.png',
     desc: 'Studied Multimedia Design in Jakarta, developing a foundation in visual communication, branding, and interactive media. Worked simultaneously as a freelance graphic designer, building end-to-end client projects across print, digital, and identity design.',
     shortDesc: 'Multimedia Design degree & freelance graphic design.',
     meta: 'Freelance clients across FMCG, events & NGO sectors',
@@ -403,6 +409,7 @@ var pins = [
     city: 'Hsinchu, Taiwan',
     role: 'EECS, National Tsing Hua University (NTHU)',
     dates: '2019 — 2023',
+    img: 'img/hsinchu.png',
     desc: "Bachelor's degree at one of Taiwan's Top 2 university. Deepened expertise in Computer Science and Electrical Engineering.",
     shortDesc: "Bachelor's in EECS at NTHU.",
     meta: "GPA: 3.4 · Department: International Bachelor's Program - EECS",
@@ -414,6 +421,7 @@ var pins = [
     city: 'Taipei, Taiwan',
     role: 'UI/UX Designer → Product Manager, Rawstone',
     dates: '2023/08 — 2025/04',
+    img: 'img/taipei.png',
     desc: 'Joined RawStone as a designer and evolved into a hybrid PM role focused on AI product solution. Led a solo rebranding in the first month. Owned end-to-end delivery of a multilingual localization feature for NitroChat.',
     shortDesc: 'AI product PM & designer at RawStone Technology.',
     meta: 'Clients: Banking · Securities · Insurance · Manufacturing',
