@@ -372,7 +372,7 @@ function buildPopup(d) {
     + '<div class="popup-inner">'
     + '<p class="popup-role">' + d.role + '</p>'
     + '<p class="popup-dates">' + d.dates + '</p>'
-    + (d.img ? '<img class="popup-img" src="' + d.img + '" alt=""/>' : '')
+    + (d.img ? '<img class="popup-img" src="' + d.img + '" alt=""' + (d.imgHeight ? ' style="height:' + d.imgHeight + '"' : '') + '/>' : '')
     + '<p class="popup-desc">' + d.desc + '</p>'
     + (d.meta ? '<p class="popup-meta">' + d.meta + '</p>' : '')
     + '<div class="popup-tags">' + tags + '</div>'
@@ -421,7 +421,7 @@ var pins = [
     city: 'Taipei, Taiwan',
     role: 'UI/UX Designer → Product Manager, Rawstone',
     dates: '2023/08 — 2025/04',
-    img: 'img/taipei.png',
+    img: 'img/taipei.png', imgHeight: '28px',
     desc: 'Joined RawStone as a designer and evolved into a hybrid PM role focused on AI product solution. Led a solo rebranding in the first month. Owned end-to-end delivery of a multilingual localization feature for NitroChat.',
     shortDesc: 'AI product PM & designer at RawStone Technology.',
     meta: 'Clients: Banking · Securities · Insurance · Manufacturing',
